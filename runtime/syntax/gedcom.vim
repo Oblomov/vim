@@ -40,6 +40,16 @@ syntax match gedcom_surname "/\(\i\|\s\)*/" contained
 syntax match gedcom_date "\d\{1,2}\s\+\(jan\|feb\|mar\|apr\|may\|jun\|jul\|aug\|sep\|oct\|nov\|dec\)\s\+\d\+"
 syntax match gedcom_date ".*" contained
 
+" GEDCOM lines begin with their 'indent' level. This would suggest something as
+"     set foldexpr=getline(v:lnum)[0]
+" but this naive approach causes neighboring lines at the same indent level to be
+" nested together. Instead, what we do is check if the next line is at a higher
+" indent level, and create a fold at _that_ indent level starting on our line
+set foldexpr=getline(v:lnum)[0]<getline(v:lnum+1)[0]?'>'.getline(v:lnum+1)[0]:getline(v:lnum)[0]
+set foldmethod=expr
+" This approach only works correctly for indent levels 0-9, but I have yet to find a GEDCOM
+" file that goes higher than 5, so this is pretty safe.
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
