@@ -1011,11 +1011,29 @@ au BufNewFile,BufRead *.ll			setf lifelines
 au BufNewFile,BufRead lilo.conf			setf lilo
 
 " Lisp (*.el = ELisp, *.cl = Common Lisp, *.jl = librep Lisp)
+" the *.cl case is handled separately to tell apart Common Lisp from OpenCL files
 if has("fname_case")
-  au BufNewFile,BufRead *.lsp,*.lisp,*.el,*.cl,*.jl,*.L,.emacs,.sawfishrc setf lisp
+  au BufNewFile,BufRead *.lsp,*.lisp,*.el,*.jl,*.L,.emacs,.sawfishrc setf lisp
 else
-  au BufNewFile,BufRead *.lsp,*.lisp,*.el,*.cl,*.jl,.emacs,.sawfishrc setf lisp
+  au BufNewFile,BufRead *.lsp,*.lisp,*.el,*.jl,.emacs,.sawfishrc setf lisp
 endif
+
+au BufNewFile,BufRead *.cl call s:FTcl()
+
+func! s:FTcl()
+  if exists("g:filetype_cl")
+    exe "setf " . g:filetype_cl
+  else
+    " recognize OpenCL by specific text in the first non-empty line; look for
+    " common preprocessor directives, kernel definitions and  C/C++-style comments
+    let l = getline(nextnonblank(1))
+    if l =~ '\s*#\s*\(include\|pragma\|if\|ifn?def\)' || l =~ '\(__\)?kernel\s\+void' || l =~ '//\|/\*'
+      setf opencl
+    else
+      setf lisp
+    endif
+  endif
+endfunc
 
 " SBCL implementation of Common Lisp
 au BufNewFile,BufRead sbclrc,.sbclrc		setf lisp
@@ -1291,6 +1309,9 @@ au BufNewFile,BufRead *.xom,*.xin		setf omnimark
 
 " OpenROAD
 au BufNewFile,BufRead *.or			setf openroad
+
+" OpenCL
+au BufNewFile,BufRead *.ocl			setf opencl
 
 " OPL
 au BufNewFile,BufRead *.[Oo][Pp][Ll]		setf opl
