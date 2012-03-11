@@ -60,6 +60,10 @@ syn keyword openclNumConst	FLT_MAX FLT_MIN FLT_EPSILON
 syn keyword openclNumConst	DBL_DIG DBL_MANT_DIG DBL_MAX_10_EXP DBL_MAX_EXP
 syn keyword openclNumConst	DBL_MIN_10_EXP DBL_MIN_EXP DBL_RADIX
 syn keyword openclNumConst	DBL_MAX DBL_MIN DBL_EPSILON
+syn keyword openclNumConst	HALF_DIG HALF_MANT_DIG HALF_MAX_10_EXP HALF_MAX_EXP
+syn keyword openclNumConst	HALF_MIN_10_EXP HALF_MIN_EXP HALF_RADIX
+syn keyword openclNumConst	HALF_MAX HALF_MIN HALF_EPSILON
+
 syn keyword openclNumConst	M_E M_LOG2E M_LOG10E M_LN2 M_LN10
 syn keyword openclNumConst	M_PI M_PI_2 M_PI_4 M_1_PI M_2_PI
 syn keyword openclNumConst	M_2_SQRTPI M_SQRT2 M_SQRT1_2
@@ -67,6 +71,10 @@ syn keyword openclNumConst	M_2_SQRTPI M_SQRT2 M_SQRT1_2
 syn keyword openclNumConst	M_E_F M_LOG2E_F M_LOG10E_F M_LN2_F M_LN10_F
 syn keyword openclNumConst	M_PI_F M_PI_2_F M_PI_4_F M_1_PI_F M_2_PI_F
 syn keyword openclNumConst	M_2_SQRTPI_F M_SQRT2_F M_SQRT1_2_F
+
+syn keyword openclNumConst	M_E_H M_LOG2E_H M_LOG10E_H M_LN2_H M_LN10_H
+syn keyword openclNumConst	M_PI_H M_PI_2_H M_PI_4_H M_1_PI_H M_2_PI_H
+syn keyword openclNumConst	M_2_SQRTPI_H M_SQRT2_H M_SQRT1_2_H
 
 syn keyword openclNumConst	NAN HUGE_VALF HUGE_VAL MAXFLOAT INFINITY
 
