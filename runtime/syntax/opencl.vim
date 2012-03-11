@@ -50,25 +50,25 @@ syn keyword openclReservedType	quad2 quad3 quad4 quad8 quad16
 syn keyword openclReservedType	imaginary complex
 
 " OpenCL predefined math constants
-syn keyword openclNumConst	CL_CHAR_BIT CL_SCHAR_MAX CL_SCHAR_MIN CL_CHAR_MAX CL_CHAR_MIN CL_UCHAR_MAX
-syn keyword openclNumConst	CL_SHRT_MAX CL_SHRT_MIN CL_USHRT_MAX
-syn keyword openclNumConst	CL_INT_MAX CL_INT_MIN CL_UINT_MAX
-syn keyword openclNumConst	CL_LONG_MAX CL_LONG_MIN CL_ULONG_MAX
-syn keyword openclNumConst	CL_FLT_DIG CL_FLT_MANT_DIG CL_FLT_MAX_10_EXP CL_FLT_MAX_EXP
-syn keyword openclNumConst	CL_FLT_MIN_10_EXP CL_FLT_MIN_EXP CL_FLT_RADIX
-syn keyword openclNumConst	CL_FLT_MAX CL_FLT_MIN CL_FLT_EPSILON
-syn keyword openclNumConst	CL_DBL_DIG CL_DBL_MANT_DIG CL_DBL_MAX_10_EXP CL_DBL_MAX_EXP
-syn keyword openclNumConst	CL_DBL_MIN_10_EXP CL_DBL_MIN_EXP CL_DBL_RADIX
-syn keyword openclNumConst	CL_DBL_MAX CL_DBL_MIN CL_DBL_EPSILON
-syn keyword openclNumConst	CL_M_E CL_M_LOG2E CL_M_LOG10E CL_M_LN2 CL_M_LN10
-syn keyword openclNumConst	CL_M_PI CL_M_PI_2 CL_M_PI_4 CL_M_1_PI CL_M_2_PI
-syn keyword openclNumConst	CL_M_2_SQRTPI CL_M_SQRT2 CL_M_SQRT1_2
+syn keyword openclNumConst	CHAR_BIT SCHAR_MAX SCHAR_MIN CHAR_MAX CHAR_MIN UCHAR_MAX
+syn keyword openclNumConst	SHRT_MAX SHRT_MIN USHRT_MAX
+syn keyword openclNumConst	INT_MAX INT_MIN UINT_MAX
+syn keyword openclNumConst	LONG_MAX LONG_MIN ULONG_MAX
+syn keyword openclNumConst	FLT_DIG FLT_MANT_DIG FLT_MAX_10_EXP FLT_MAX_EXP
+syn keyword openclNumConst	FLT_MIN_10_EXP FLT_MIN_EXP FLT_RADIX
+syn keyword openclNumConst	FLT_MAX FLT_MIN FLT_EPSILON
+syn keyword openclNumConst	DBL_DIG DBL_MANT_DIG DBL_MAX_10_EXP DBL_MAX_EXP
+syn keyword openclNumConst	DBL_MIN_10_EXP DBL_MIN_EXP DBL_RADIX
+syn keyword openclNumConst	DBL_MAX DBL_MIN DBL_EPSILON
+syn keyword openclNumConst	M_E M_LOG2E M_LOG10E M_LN2 M_LN10
+syn keyword openclNumConst	M_PI M_PI_2 M_PI_4 M_1_PI M_2_PI
+syn keyword openclNumConst	M_2_SQRTPI M_SQRT2 M_SQRT1_2
 
-syn keyword openclNumConst	CL_M_E_F CL_M_LOG2E_F CL_M_LOG10E_F CL_M_LN2_F CL_M_LN10_F
-syn keyword openclNumConst	CL_M_PI_F CL_M_PI_2_F CL_M_PI_4_F CL_M_1_PI_F CL_M_2_PI_F
-syn keyword openclNumConst	CL_M_2_SQRTPI_F CL_M_SQRT2_F CL_M_SQRT1_2_F
+syn keyword openclNumConst	M_E_F M_LOG2E_F M_LOG10E_F M_LN2_F M_LN10_F
+syn keyword openclNumConst	M_PI_F M_PI_2_F M_PI_4_F M_1_PI_F M_2_PI_F
+syn keyword openclNumConst	M_2_SQRTPI_F M_SQRT2_F M_SQRT1_2_F
 
-syn keyword openclNumConst	CL_NAN CL_HUGE_VALF CL_HUGE_VAL CL_MAXFLOAT CL_INFINITY
+syn keyword openclNumConst	NAN HUGE_VALF HUGE_VAL MAXFLOAT INFINITY
 
 " OpenCL image channel data type and order, addressing and filtering modes
 syn keyword openclImgConst	CLK_SNORM_INT8 CLK_SNORM_INT16 CLK_UNORM_INT8 CLK_UNORM_INT16
