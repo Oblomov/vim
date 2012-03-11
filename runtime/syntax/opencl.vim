@@ -89,8 +89,6 @@ syn keyword openclImgConst	CLK_LOCAL_MEM_FENCE CLK_GLOBAL_MEM_FENCE
 
 
 " OpenCL preprocessor constants, often used in conditionals
-syn keyword openclPreConst	OPENCL FP_CONTRACT EXTENSION ON OFF DEFAULT containedin=cPreCondit
-syn keyword openclPreConst	FP_FAST_FMA FP_FAST_FMAF containedin=cPreCondit
 syn keyword openclPreConst	__FILE__ __LINE__ __OPENCL_VERSION__ containedin=cPreCondit
 syn keyword openclPreConst	CL_VERSION_1_0 CL_VERSION_1_1 CL_VERSION_1_2 containedin=cPreCondit
 syn keyword openclPreConst	__ENDIAN_LITTLE__ __IMAGE_SUPPORT__ containedin=cPreCondit
@@ -98,6 +96,9 @@ syn keyword openclPreConst	__FAST_RELAXED_MATH__ __EMBEDDED_PROFILE__ containedi
 
 " Pragma constants, contained in #pragma invocation for extensions
 syn keyword openclExtSwitch	enable disable containedin=cPreProc
+
+syn keyword openclPreConst	OPENCL FP_CONTRACT EXTENSION ON OFF DEFAULT containedin=cPreProc
+syn keyword openclPreConst	FP_FAST_FMA FP_FAST_FMAF FP_FAST_FMA_HALF containedin=cPreProc
 
 syn keyword openclExtension	cl_khr_byte_addressable_store containedin=cPreCondit,cPreProc
 syn keyword openclExtension	cl_khr_global_int32_base_atomics cl_khr_global_int32_extended_atomics containedin=cPreCondit,cPreProc
