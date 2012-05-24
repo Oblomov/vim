@@ -80,20 +80,21 @@ syn keyword openclNumConst	NAN HUGE_VALF HUGE_VAL MAXFLOAT INFINITY
 
 " OpenCL image channel data type and order, addressing and filtering modes
 syn keyword openclImgConst	CLK_SNORM_INT8 CLK_SNORM_INT16 CLK_UNORM_INT8 CLK_UNORM_INT16
-syn keyword openclImgConst	CLK_UNORM_SHORT_565 CLK_UNORM_SHORT_555 CLK_UNORM_SHORT_101010
+syn keyword openclImgConst	CLK_UNORM_SHORT_565 CLK_UNORM_SHORT_555 CLK_UNORM_INT_101010
 syn keyword openclImgConst	CLK_SIGNED_INT8 CLK_SIGNED_INT16 CLK_SIGNED_INT32
 syn keyword openclImgConst	CLK_UNSIGNED_INT8 CLK_UNSIGNED_INT16 CLK_UNSIGNED_INT32
 syn keyword openclImgConst	CLK_HALF_FLOAT CLK_FLOAT
 
-syn keyword openclImgConst	CLK_A CLK_R CLK_Rx CLK_RG CLK_RGx CLK_RA
-syn keyword openclImgConst	CLK_RGB CLK_RGBx CLK_RGBA CLK_ARGB CLK_BGRA
+syn keyword openclImgConst	CLK_A CLK_R CLK_Rx CLK_RA CLK_RG CLK_RGx
+syn keyword openclImgConst	CLK_RGB CLK_RGBx CLK_ARGB CLK_BGRA CLK_RGBA
 syn keyword openclImgConst	CLK_INTENSITY CLK_LUMINANCE
 
-syn keyword openclImgConst	CLK_ADDRESS_CLAMP_TO_EDGE CLK_ADDRESS_CLAMP CLK_ADDRESS_NONE
+syn keyword openclImgConst	CLK_NORMALIZED_COORDS_TRUE CLK_NORMALIZED_COORDS_FALSE
+syn keyword openclImgConst	CLK_ADDRESS_CLAMP_TO_EDGE CLK_ADDRESS_CLAMP CLK_ADDRESS_MIRRORED_REPEAT CLK_ADDRESS_NONE CLK_ADDRESS_REPEAT
 syn keyword openclImgConst	CLK_FILTER_NEAREST CLK_FILTER_LINEAR
 
 " Mem fence options, stick them with imag constants
-syn keyword openclImgConst	CLK_LOCAL_MEM_FENCE CLK_GLOBAL_MEM_FENCE
+syn keyword openclImgConst	CLK_LOCAL_MEM_FENCE CLK_GLOBAL_MEM_FENCE CLK_REGION_MEM_FENCE
 
 
 " OpenCL preprocessor constants, often used in conditionals
@@ -168,7 +169,7 @@ syn keyword openclBuiltin	nextafter normalize
 syn keyword openclBuiltin	pow pown powr prefetch
 
 syn keyword openclBuiltin	radians
-syn keyword openclBuiltin	read_imagef read_imageh read_imageui
+syn keyword openclBuiltin	read_imagef read_imageh read_imagei read_imageui
 syn keyword openclBuiltin	read_mem_fence
 syn keyword openclBuiltin	remainder remquo rhadd rint
 syn keyword openclBuiltin	rootn rotate round rsqrt
